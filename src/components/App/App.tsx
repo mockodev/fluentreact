@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from '@fluentui/react-theme-provider';
-import { PrimaryButton, Stack, Toggle } from '@fluentui/react';
+import { PrimaryButton, Stack, Toggle, ColorPicker, Calendar } from '@fluentui/react';
 import { darkTheme, lightTheme } from '../../themes';
 const App: React.FC = () => {
   const [useDarkMode, setUseDarkMode] = useState(false);
@@ -21,7 +21,17 @@ const App: React.FC = () => {
             label="Change themes"
             onText="Dark Mode" offText="Light Mode"
             onChange={() => setUseDarkMode(!useDarkMode)}
+            
           />
+        </Stack.Item>
+        <Stack.Item>
+          <ColorPicker
+          color =""
+
+          />          
+        </Stack.Item>
+        <Stack.Item>
+          <Calendar/>
         </Stack.Item>
       </Stack>
     </ThemeProvider>
